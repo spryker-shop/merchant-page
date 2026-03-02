@@ -21,33 +21,21 @@ class MerchantPageResourceCreatorPlugin extends AbstractPlugin implements Resour
      */
     public const ATTRIBUTE_MERCHANT_STORAGE_TRANSFER = 'merchantStorageTransfer';
 
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return MerchantStorageConfig::MERCHANT_RESOURCE_NAME;
     }
 
-    /**
-     * @return string
-     */
     public function getModuleName(): string
     {
         return 'MerchantPage';
     }
 
-    /**
-     * @return string
-     */
     public function getControllerName(): string
     {
         return 'Merchant';
     }
 
-    /**
-     * @return string
-     */
     public function getActionName(): string
     {
         return 'index';

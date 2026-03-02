@@ -18,12 +18,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class MerchantController extends AbstractController
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantStorageTransfer $merchantStorageTransfer
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Spryker\Yves\Kernel\View\View
-     */
     public function indexAction(MerchantStorageTransfer $merchantStorageTransfer, Request $request): View
     {
         return $this->view(

@@ -23,11 +23,6 @@ class MerchantPageDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const SERVICE_ROUTER = 'routers';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -37,11 +32,6 @@ class MerchantPageDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addMerchantStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_MERCHANT_STORAGE, function (Container $container) {
@@ -51,11 +41,6 @@ class MerchantPageDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addRouter(Container $container): Container
     {
         $container->set(static::SERVICE_ROUTER, function (Container $container) {

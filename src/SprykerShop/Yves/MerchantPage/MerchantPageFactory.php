@@ -13,17 +13,11 @@ use SprykerShop\Yves\MerchantPage\Dependency\Client\MerchantPageToMerchantStorag
 
 class MerchantPageFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\MerchantPage\Dependency\Client\MerchantPageToMerchantStorageClientInterface
-     */
     public function getMerchantStorageClient(): MerchantPageToMerchantStorageClientInterface
     {
         return $this->getProvidedDependency(MerchantPageDependencyProvider::CLIENT_MERCHANT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Yves\Router\Router\ChainRouter
-     */
     public function getRouter(): ChainRouter
     {
         return $this->getProvidedDependency(MerchantPageDependencyProvider::SERVICE_ROUTER);

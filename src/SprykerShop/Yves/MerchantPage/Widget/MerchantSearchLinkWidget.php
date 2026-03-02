@@ -33,35 +33,21 @@ class MerchantSearchLinkWidget extends AbstractWidget
      */
     protected const SEARCH_BUTTON_URL = 'searchButtonUrl';
 
-    /**
-     * @param string $merchantName
-     */
     public function __construct(string $merchantName)
     {
         $this->addParameter(static::SEARCH_BUTTON_URL, $this->generateSearchUrl($merchantName));
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'MerchantSearchLinkWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@MerchantPage/views/merchant-search-link/merchant-search-link.twig';
     }
 
-    /**
-     * @param string $merchantName
-     *
-     * @return string
-     */
     protected function generateSearchUrl(string $merchantName): string
     {
         return $this->getFactory()->getRouter()->generate(static::ROUTE_SEARCH, [
